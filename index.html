@@ -1,0 +1,2057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="CUSAT M.Tech Geotechnical Engineering placement and industry brochure.">
+<title>CUSAT Geotechnical Engineering — Placement Brochure</title>
+<link rel="stylesheet" href="styles.css">
+
+<style>
+.student-grid{grid-template-columns:repeat(3,1fr);gap:16px;}
+.student-card{text-align:left;display:flex;flex-direction:column;align-items:flex-start;}
+.student-photo{width:100%;height:210px;border-radius:10px;margin:0 0 16px;overflow:hidden;background:var(--bg2);}
+.student-photo img{width:100%;height:100%;display:block;object-fit:cover;}
+.student-card b{font-size:15px;margin-bottom:5px;}
+.student-card span{font-size:11.5px;color:var(--mut);}
+.student-interest{font-size:12.5px;line-height:1.55;color:var(--mut);margin:10px 0;}
+.student-card a{color:var(--mut);font-size:11.5px;text-decoration:none;margin-top:5px;word-break:break-word;}
+.student-card a:hover{color:var(--red);}
+@media(max-width:760px){.student-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:500px){.student-grid{grid-template-columns:1fr;}.student-photo{height:260px;}}
+
+/* CUSAT logo */
+.cusat-logo-wrap{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin:0 0 28px;
+  max-width:560px;
+}
+.cusat-logo-wrap img{
+  width:72px;
+  height:72px;
+  object-fit:contain;
+  flex:0 0 72px;
+}
+.cusat-logo-wrap strong{
+  display:block;
+  font-size:13px;
+  letter-spacing:.06em;
+  line-height:1.35;
+}
+.cusat-logo-wrap span{
+  display:block;
+  margin-top:4px;
+  font-size:11px;
+  color:var(--mut);
+}
+
+/* Previous recruiters */
+.recruiter-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+  margin-top:26px;
+}
+.recruiter-logo{
+  min-height:125px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:var(--bg2);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:16px;
+  text-align:center;
+}
+.recruiter-logo img{
+  max-width:135px;
+  max-height:58px;
+  width:auto;
+  height:auto;
+  object-fit:contain;
+}
+.recruiter-logo span{
+  color:var(--mut);
+  font-size:11px;
+}
+@media(max-width:850px){
+  .recruiter-grid{grid-template-columns:repeat(3,1fr);}
+}
+@media(max-width:600px){
+  .recruiter-grid{grid-template-columns:repeat(2,1fr);}
+  .cusat-logo-wrap img{width:60px;height:60px;flex-basis:60px;}
+}
+
+
+/* Rankings & Recognition — matched to the brochure theme */
+.rankings-section{position:relative;overflow:hidden;}
+.rankings-shell{
+  position:relative;
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:26px;
+  background:var(--card);
+  overflow:hidden;
+}
+.rankings-shell:before{
+  content:"";
+  position:absolute;
+  left:0;top:0;bottom:0;
+  width:4px;
+  background:var(--red);
+}
+.rankings-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  margin-bottom:24px;
+}
+.rankings-kicker{display:flex;align-items:center;gap:13px;}
+.rankings-laurel{
+  width:44px;height:44px;
+  border:1px solid var(--red);
+  border-radius:10px;
+  display:grid;place-items:center;
+  background:var(--red-dim);
+  color:var(--red);
+  font-size:20px;
+}
+.rankings-kicker h3{margin:0;font-size:22px;letter-spacing:-.02em;}
+.rankings-kicker span{
+  display:block;margin-top:4px;font-size:10px;color:var(--mut);
+  letter-spacing:.1em;text-transform:uppercase;
+}
+.rankings-note{
+  max-width:270px;font-size:10.5px;line-height:1.5;
+  color:var(--mut);text-align:right;
+}
+.rankings-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+.rank-card{
+  position:relative;min-height:142px;padding:18px 15px 15px;
+  border:1px solid var(--line);border-radius:10px;
+  background:var(--bg2);display:flex;flex-direction:column;
+  justify-content:space-between;overflow:hidden;
+  transition:transform .2s ease,border-color .2s ease,background .2s ease;
+}
+.rank-card:hover{transform:translateY(-3px);border-color:var(--red);}
+.rank-card.featured{background:var(--red);color:#181008;border-color:var(--red);}
+.rank-card.featured .rank-source,.rank-card.featured .rank-place{color:#30150e;}
+.rank-card.featured .rank-number{color:#181008;}
+.rank-source{
+  font-size:10px;font-weight:800;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--red);
+}
+.rank-main{display:flex;align-items:center;gap:12px;}
+.rank-number{
+  font-size:34px;line-height:1;font-weight:900;
+  letter-spacing:-.06em;color:var(--red);
+}
+.rank-copy{font-size:13px;line-height:1.25;font-weight:750;}
+.rank-place{font-size:10.5px;color:var(--mut);line-height:1.35;}
+.rank-medal{
+  position:absolute;right:-18px;bottom:-20px;width:62px;height:62px;
+  border:1px solid rgba(255,91,65,.25);border-radius:50%;opacity:.65;
+}
+.rank-medal:before{
+  content:"★";position:absolute;inset:0;display:grid;place-items:center;
+  color:var(--red);font-size:17px;
+}
+.rank-card.featured .rank-medal{border-color:rgba(24,16,8,.2);}
+.rank-card.featured .rank-medal:before{color:#181008;}
+.naac-card{grid-column:span 2;min-height:142px;}
+.naac-value{font-size:46px;line-height:1;font-weight:900;color:var(--red);letter-spacing:-.05em;}
+.rank-card.featured .naac-value{color:#181008;}
+.rankings-footer{
+  margin-top:16px;padding-top:13px;border-top:1px solid var(--line);
+  font-size:10.5px;color:var(--mut);display:flex;
+  justify-content:space-between;gap:15px;
+}
+@media(max-width:900px){
+  .rankings-grid{grid-template-columns:repeat(2,1fr);}
+  .naac-card{grid-column:span 1;}
+  .rankings-note{text-align:left;max-width:none;}
+  .rankings-top{align-items:flex-start;flex-direction:column;}
+}
+@media(max-width:520px){
+  .rankings-shell{padding:18px;}
+  .rankings-grid{grid-template-columns:1fr;}
+  .naac-card{grid-column:span 1;}
+  .rankings-footer{flex-direction:column;}
+}
+
+
+/* Placement brochure enhancements */
+.capability-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px;}
+.capability-card{padding:20px;border:1px solid var(--line);border-radius:12px;background:var(--bg2);min-height:145px;transition:.2s ease;}
+.capability-card:hover{transform:translateY(-3px);border-color:var(--red);}
+.capability-card .cap-no{font-size:10px;color:var(--red);font-weight:800;letter-spacing:.1em;}
+.capability-card h3{margin:18px 0 8px;font-size:15px;}
+.capability-card p{margin:0;color:var(--mut);font-size:11.5px;line-height:1.55;}
+.tools-strip{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px;}
+.tool-pill{border:1px solid var(--line);background:var(--bg2);border-radius:999px;padding:9px 13px;font-size:11px;font-weight:700;color:var(--mut);}
+.tool-pill b{color:var(--red);font-weight:800;}
+.project-grid{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:14px;margin-top:24px;}
+.project-card{position:relative;border:1px solid var(--line);border-radius:13px;padding:22px;background:var(--bg2);min-height:205px;overflow:hidden;}
+.project-card.featured{background:linear-gradient(135deg,var(--card),var(--bg2));border-color:var(--red);}
+.project-card:after{content:"";position:absolute;width:90px;height:90px;border:1px solid var(--red);border-radius:50%;right:-38px;bottom:-42px;opacity:.18;}
+.project-tag{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--red);font-weight:800;}
+.project-card h3{font-size:16px;line-height:1.25;margin:14px 0 9px;}
+.project-card p{font-size:11.5px;line-height:1.55;color:var(--mut);margin:0;}
+.project-tools{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px;}
+.project-tools span{font-size:9.5px;border:1px solid var(--line);padding:5px 7px;border-radius:6px;color:var(--mut);}
+.industry-intro{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;align-items:stretch;margin-top:24px;}
+.industry-panel{border:1px solid var(--line);border-radius:13px;background:var(--bg2);padding:24px;}
+.industry-panel h3{margin:0 0 9px;font-size:17px;}
+.industry-panel p{font-size:11.5px;line-height:1.6;color:var(--mut);}
+.industry-values{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:16px;}
+.industry-value{padding:11px;border-left:2px solid var(--red);background:var(--card);font-size:10.5px;color:var(--mut);}
+.ranking-meta{font-size:9px;color:var(--mut);margin-top:6px;line-height:1.35;}
+@media(max-width:900px){.capability-grid{grid-template-columns:repeat(2,1fr);}.project-grid{grid-template-columns:1fr 1fr;}.project-card.featured{grid-column:span 2;}.industry-intro{grid-template-columns:1fr;}}
+@media(max-width:560px){.capability-grid{grid-template-columns:1fr;}.project-grid{grid-template-columns:1fr;}.project-card.featured{grid-column:span 1;}.industry-values{grid-template-columns:1fr;}}
+
+
+.programme-agenda{position:relative;overflow:hidden}
+.programme-agenda-shell{position:relative;min-height:410px;border:1px solid var(--line);border-radius:16px;background:radial-gradient(circle at 82% 18%,rgba(255,91,65,.08),transparent 28%),linear-gradient(135deg,var(--card),var(--bg2));overflow:hidden}
+.programme-agenda-shell:before{content:"04";position:absolute;left:-26px;bottom:-88px;font-size:280px;line-height:.8;font-weight:900;letter-spacing:-.12em;color:rgba(255,255,255,.035);pointer-events:none}
+.programme-agenda-title{position:absolute;left:34px;top:30px;max-width:290px;z-index:2}
+.programme-agenda-title .eyebrow{display:block;color:var(--red);font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
+.programme-agenda-title h3{margin:0;font-size:clamp(30px,4vw,52px);line-height:.98;letter-spacing:-.055em}
+.programme-agenda-title p{margin:14px 0 0;color:var(--mut);font-size:11px;line-height:1.55;max-width:260px}
+.programme-agenda-meta{position:absolute;left:35px;bottom:27px;display:flex;gap:8px;flex-wrap:wrap;max-width:330px}
+.programme-agenda-meta span{border:1px solid var(--line);background:rgba(255,255,255,.025);border-radius:999px;padding:7px 10px;color:var(--mut);font-size:9.5px}
+.programme-agenda-meta b{color:var(--red)}
+.programme-drawer{position:absolute;z-index:5;top:0;right:0;width:min(58%,650px);height:100%;background:rgba(17,17,17,.97);border-left:1px solid var(--line);transform:translateX(0);transition:transform .42s cubic-bezier(.22,.8,.25,1);box-shadow:-20px 0 60px rgba(0,0,0,.18)}
+.programme-drawer.is-collapsed{transform:translateX(calc(100% - 42px))}
+.programme-toggle{position:absolute;left:-42px;top:50%;transform:translateY(-50%);width:42px;height:116px;border:0;border-radius:12px 0 0 12px;background:var(--red);color:#181008;cursor:pointer;display:flex;align-items:center;justify-content:center;writing-mode:vertical-rl;text-orientation:mixed;font-size:9px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;box-shadow:-5px 8px 25px rgba(0,0,0,.2)}
+.programme-toggle:hover{filter:brightness(1.06)}
+.programme-toggle .toggle-arrow{font-size:15px;margin-bottom:6px}
+.programme-drawer.is-collapsed .toggle-arrow{transform:rotate(180deg)}
+.programme-drawer-inner{
+  height:100%;
+  overflow:auto;
+  padding:30px 32px 30px 34px;
+  scrollbar-width:thin;
+  scrollbar-color:var(--red) transparent;
+  overscroll-behavior:contain;
+}
+
+/* Theme-matched programme scrollbar */
+.programme-drawer-inner::-webkit-scrollbar{width:7px;}
+.programme-drawer-inner::-webkit-scrollbar-track{
+  background:rgba(255,255,255,.035);
+  border-left:1px solid rgba(255,255,255,.04);
+}
+.programme-drawer-inner::-webkit-scrollbar-thumb{
+  background:var(--red);
+  border-radius:999px;
+  border:2px solid transparent;
+  background-clip:padding-box;
+}
+.programme-drawer-inner::-webkit-scrollbar-thumb:hover{
+  background:#ff6b54;
+  border:2px solid transparent;
+  background-clip:padding-box;
+}
+
+.programme-drawer-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;padding-bottom:16px;margin-bottom:8px;border-bottom:1px solid var(--line)}
+.programme-drawer-head h3{margin:0;font-size:19px;letter-spacing:-.025em}
+.programme-drawer-head span{font-size:9px;color:var(--red);font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.agenda-row{display:grid;grid-template-columns:62px 1fr;gap:18px;padding:15px 0;border-bottom:1px solid var(--line)}
+.agenda-sem{display:flex;flex-direction:column;align-items:flex-start;line-height:1}
+.agenda-sem .roman{font-size:30px;font-weight:900;letter-spacing:-.06em;color:var(--red)}
+.agenda-sem small{margin-top:5px;font-size:8px;color:var(--mut);letter-spacing:.08em;text-transform:uppercase}
+.agenda-content h4{margin:0 0 5px;font-size:13px}
+.agenda-content p{margin:0;color:var(--mut);font-size:10.5px;line-height:1.5}
+.agenda-credits{display:inline-block;margin-top:7px;color:var(--red);font-size:9px;font-weight:800;letter-spacing:.06em}
+.programme-bottom-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:13px}
+.programme-mini{padding:13px;border:1px solid var(--line);border-radius:9px;background:var(--bg2)}
+.programme-mini b{display:block;color:var(--red);font-size:10px;margin-bottom:5px}
+.programme-mini span{color:var(--mut);font-size:9.5px;line-height:1.4}
+@media(max-width:850px){.programme-agenda-shell{min-height:500px}.programme-drawer{width:72%}}
+@media(max-width:600px){.programme-agenda-shell{min-height:650px}.programme-agenda-title{left:22px;top:24px;max-width:190px}.programme-agenda-title h3{font-size:32px}.programme-agenda-meta{left:22px;bottom:22px;max-width:180px}.programme-drawer{width:calc(100% - 24px)}.programme-drawer.is-collapsed{transform:translateX(calc(100% - 38px))}.programme-toggle{left:-38px;width:38px}.programme-drawer-inner{padding:25px 18px 25px 22px}.agenda-row{grid-template-columns:48px 1fr;gap:12px}.agenda-sem .roman{font-size:25px}.programme-bottom-row{grid-template-columns:1fr}}
+
+/* Final theme refinements */
+/* Why Hire: red accent appears only on hover */
+#why .grid3 .card.red{
+  background:var(--bg2);
+  border-color:var(--line);
+  color:inherit;
+}
+#why .grid3 .card,
+#why .grid3 .card.red{
+  transition:background .2s ease,border-color .2s ease,color .2s ease,transform .2s ease;
+}
+#why .grid3 .card:hover,
+#why .grid3 .card.red:hover{
+  border-color:var(--red);
+  background:var(--red);
+  color:#181008;
+  transform:translateY(-3px);
+}
+#why .grid3 .card:hover h3,
+#why .grid3 .card:hover p,
+#why .grid3 .card.red:hover h3,
+#why .grid3 .card.red:hover p{
+  color:#181008;
+}
+
+/* Projects: every project gets the red stroke only on hover */
+#projects .project-card,
+#projects .project-card.featured{
+  border-color:var(--line);
+}
+#projects .project-card:hover,
+#projects .project-card.featured:hover{
+  border-color:var(--red);
+}
+
+/* Programme: fixed agenda — no drawer and no internal scrolling */
+.programme-agenda-shell{
+  min-height:500px;
+}
+.programme-drawer{
+  position:absolute;
+  z-index:2;
+  top:0;
+  right:0;
+  width:min(58%,650px);
+  height:100%;
+  background:rgba(17,17,17,.97);
+  border-left:1px solid var(--line);
+  transform:none !important;
+  box-shadow:none;
+}
+.programme-drawer-inner{
+  height:100%;
+  overflow:visible;
+  padding:28px 30px;
+  scrollbar-width:auto;
+}
+.programme-drawer-head{padding-bottom:12px;margin-bottom:2px}
+.agenda-row{padding:11px 0;gap:15px}
+.agenda-sem .roman{font-size:28px}
+.agenda-content h4{margin-bottom:4px}
+.agenda-content p{font-size:10px;line-height:1.42}
+.agenda-credits{margin-top:5px}
+.programme-bottom-row{margin-top:10px}
+
+@media(max-width:850px){
+  .programme-agenda-shell{min-height:620px}
+  .programme-drawer{width:72%;}
+}
+@media(max-width:600px){
+  .programme-agenda-shell{min-height:0;padding-bottom:20px}
+  .programme-agenda-title{position:relative;left:auto;top:auto;padding:24px 22px 0;max-width:100%;}
+  .programme-agenda-meta{position:relative;left:auto;bottom:auto;padding:0 22px;margin-top:14px;max-width:100%;}
+  .programme-drawer{position:relative;top:auto;right:auto;width:100%;height:auto;margin-top:18px;border-left:0;border-top:1px solid var(--line);}
+  .programme-drawer-inner{height:auto;padding:22px 18px;}
+}
+
+
+.samplebar{display:none !important;}
+
+/* Fix first Why Hire card text */
+#why .grid3 .card.red,
+#why .grid3 .card.red h3,
+#why .grid3 .card.red p {
+  color: #f5f5f5 !important;
+}
+
+#why .grid3 .card.red p {
+  color: var(--mut) !important;
+}
+
+#why .grid3 .card.red:hover,
+#why .grid3 .card.red:hover h3,
+#why .grid3 .card.red:hover p {
+  color: #181008 !important;
+}
+
+/* Remove curriculum wheel helper label */
+.curriculum-select,
+.wheel-select,
+.select-topic,
+.wheel-hint,
+.curriculum-hint{
+  display:none !important;
+}
+
+</style>
+
+
+<style id="curriculum-wheel-styles">
+#curriculum{overflow:hidden}
+.curriculum-wheel{position:relative;width:min(100%,980px);height:560px;margin:4px auto 0;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:radial-gradient(circle at 50% 50%,rgba(255,91,65,.075),transparent 25%),radial-gradient(circle at 50% 50%,rgba(255,255,255,.025),transparent 58%),var(--card)}
+.curriculum-wheel:before,.curriculum-wheel:after{content:"";position:absolute;left:50%;top:50%;width:1px;height:100%;background:linear-gradient(to bottom,transparent,rgba(255,255,255,.055),transparent);transform:translate(-50%,-50%);pointer-events:none}
+.curriculum-wheel:after{width:100%;height:1px}
+.curriculum-orbit{position:absolute;left:50%;top:50%;border:1px solid rgba(255,91,65,.24);border-radius:50%;transform:translate(-50%,-50%);pointer-events:none}
+.orbit-outer{width:680px;height:680px}.orbit-inner{width:430px;height:430px;border-color:rgba(255,255,255,.08)}
+.curriculum-axis-dot{position:absolute;width:7px;height:7px;border-radius:50%;background:var(--red);box-shadow:0 0 0 5px rgba(255,91,65,.08);z-index:2}
+.dot-top{left:50%;top:calc(50% - 340px);transform:translate(-50%,-50%)}.dot-bottom{left:50%;top:calc(50% + 340px);transform:translate(-50%,-50%)}
+.curriculum-center{position:absolute;left:50%;top:50%;width:250px;height:250px;transform:translate(-50%,-50%);border:1px solid rgba(255,91,65,.48);border-radius:50%;background:rgba(18,18,18,.94);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px;z-index:4;box-shadow:0 0 70px rgba(0,0,0,.28),inset 0 0 45px rgba(255,91,65,.035)}
+.curriculum-center:before{content:"";position:absolute;inset:9px;border:1px dashed rgba(255,91,65,.2);border-radius:50%}
+.curriculum-kicker{position:relative;z-index:1;color:var(--red);font-size:8px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;margin-bottom:13px}
+.curriculum-center strong{position:relative;z-index:1;font-size:29px;line-height:.96;letter-spacing:-.055em}.curriculum-center strong em{color:var(--red);font-style:normal}
+.curriculum-center p{position:relative;z-index:1;max-width:180px;margin:13px 0 0;color:var(--mut);font-size:10px;line-height:1.5}
+.curriculum-node{position:absolute;width:126px;height:126px;border:0;border-radius:50%;background:transparent;color:var(--mut);cursor:pointer;padding:0;z-index:5;transform:translate(-50%,-50%);transition:color .22s ease,transform .22s ease}
+.curriculum-node:before{content:"";position:absolute;inset:9px;border:1px solid var(--line);border-radius:50%;background:var(--bg2);transition:background .22s ease,border-color .22s ease,box-shadow .22s ease}
+.curriculum-node:after{content:"";position:absolute;width:8px;height:8px;left:50%;top:-1px;transform:translate(-50%,-50%);border-radius:50%;background:var(--red);opacity:.7}
+.curriculum-node>span{position:relative;z-index:2;display:block}.curriculum-node .node-no{font-size:29px;line-height:1;font-weight:900;letter-spacing:-.06em;color:var(--mut);transition:color .22s ease}
+.curriculum-node .node-label{margin-top:6px;font-size:9.5px;line-height:1.15;font-weight:800;text-transform:uppercase;letter-spacing:.04em}
+.curriculum-node:hover{transform:translate(-50%,-50%) scale(1.05);color:var(--ink)}
+.curriculum-node:hover:before,.curriculum-node.active:before{background:var(--red);border-color:var(--red);box-shadow:0 0 0 7px rgba(255,91,65,.07)}
+.curriculum-node:hover .node-no,.curriculum-node.active .node-no,.curriculum-node:hover .node-label,.curriculum-node.active .node-label{color:#181008}
+.curriculum-node.active:after{opacity:1;box-shadow:0 0 0 5px rgba(255,91,65,.12)}
+.node-1{left:50%;top:7%}.node-2{left:18%;top:30%}.node-3{left:18%;top:70%}.node-4{left:50%;top:93%}.node-5{left:82%;top:70%}.node-6{left:82%;top:30%}
+.curriculum-wheel-note{position:absolute;left:28px;bottom:24px;display:flex;flex-direction:column;gap:4px;z-index:6}
+.curriculum-wheel-note span{font-size:8px;letter-spacing:.14em;color:var(--mut);font-weight:800}.curriculum-wheel-note b{font-size:12px;color:var(--red);letter-spacing:.06em}
+@media(max-width:760px){.curriculum-wheel{height:520px}.orbit-outer{width:570px;height:570px}.orbit-inner{width:340px;height:340px}.dot-top{top:calc(50% - 285px)}.dot-bottom{top:calc(50% + 285px)}.curriculum-center{width:205px;height:205px;padding:25px}.curriculum-center strong{font-size:24px}.curriculum-center p{font-size:9px;max-width:150px}.curriculum-node{width:105px;height:105px}.curriculum-node .node-no{font-size:24px}.curriculum-node .node-label{font-size:8px}}
+@media(max-width:560px){.curriculum-wheel{height:auto;padding:28px 16px 20px}.curriculum-orbit,.curriculum-axis-dot,.curriculum-wheel:before,.curriculum-wheel:after,.curriculum-wheel-note{display:none}.curriculum-center{position:relative;left:auto;top:auto;transform:none;width:190px;height:190px;margin:0 auto 22px}.curriculum-node{position:relative;left:auto!important;top:auto!important;transform:none!important;width:100%;height:70px;border-radius:10px;margin:7px 0;text-align:left;display:flex;align-items:center;gap:15px;padding:0 16px}.curriculum-node:before{inset:0;border-radius:10px}.curriculum-node:after{left:auto;right:16px;top:50%;transform:translateY(-50%)}.curriculum-node .node-no{font-size:25px;width:40px}.curriculum-node .node-label{margin:0;font-size:10px}}
+</style>
+
+
+<style>
+/* Academic Curriculum — free-floating wheel, outside any card/box */
+#curriculum .curriculum-wheel{
+  border:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  overflow:visible !important;
+}
+@media (min-width:761px){
+  #curriculum .wrap{position:relative;}
+  #curriculum .curriculum-wheel{
+    width:680px;
+    max-width:none;
+    height:560px;
+    margin-left:-125px;
+    margin-right:0;
+  }
+  #curriculum .curriculum-wheel .curriculum-center{
+    left:50%;
+  }
+  #curriculum .curriculum-side-info{
+    position:absolute;
+    top:92px;
+    right:10px;
+    width:330px;
+  }
+}
+@media (min-width:1100px){
+  #curriculum .curriculum-wheel{
+    width:680px;
+    margin-left:-135px;
+  }
+}
+.curriculum-node{
+  transition:transform .45s ease, background .35s ease, border-color .35s ease,
+             color .35s ease, box-shadow .35s ease;
+}
+.curriculum-node.auto-active{
+  background:var(--red)!important;
+  border-color:var(--red)!important;
+  color:#181008!important;
+  box-shadow:0 0 0 5px rgba(255,91,65,.10), 0 12px 30px rgba(0,0,0,.20);
+}
+.curriculum-node.auto-active .node-no,
+.curriculum-node.auto-active .node-label{color:#181008!important;}
+#curriculumDescription{transition:opacity .25s ease, transform .25s ease;}
+#curriculumDescription.topic-changing{opacity:0;transform:translateY(6px);}
+
+@media(max-width:760px){
+  #curriculum .curriculum-wheel{
+    width:100%;
+    height:520px;
+    margin:0;
+    border:0 !important;
+    background:transparent !important;
+  }
+  #curriculum .curriculum-side-info{
+    position:relative;
+    top:auto;
+    right:auto;
+    width:100%;
+    margin:8px 0 0;
+    padding:8px 22px 28px;
+  }
+}
+
+.curriculum-side-info{
+  z-index:6;
+  padding:12px 0;
+}
+.curriculum-side-kicker{
+  display:block;
+  color:var(--red);
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  margin-bottom:14px;
+}
+.curriculum-side-info h3{
+  margin:0;
+  font-size:clamp(27px,3vw,42px);
+  line-height:.98;
+  letter-spacing:-.045em;
+}
+.curriculum-side-info h3 em{
+  color:var(--red);
+  font-style:normal;
+}
+.curriculum-side-info > p{
+  max-width:300px;
+  margin:16px 0 24px;
+  color:var(--mut);
+  font-size:11.5px;
+  line-height:1.6;
+}
+.curriculum-side-stats{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px 26px;
+  max-width:300px;
+  padding-top:16px;
+  border-top:1px solid var(--line);
+}
+.curriculum-side-stats div{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+.curriculum-side-stats b{
+  color:var(--red);
+  font-size:25px;
+  line-height:1;
+  font-weight:900;
+}
+.curriculum-side-stats span{
+  color:var(--mut);
+  font-size:9.5px;
+}
+
+</style>
+
+
+<style id="curriculum-side-box-refinement">
+/* Box the School of Engineering side content */
+#curriculum .curriculum-side-info{
+  box-sizing:border-box;
+  padding:28px 30px 30px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:var(--bg2);
+  box-shadow:0 18px 45px rgba(0,0,0,.18);
+}
+
+/* Keep each School of Engineering statistic in its own box */
+#curriculum .curriculum-side-stats{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  max-width:100%;
+  padding-top:16px;
+  border-top:1px solid var(--line);
+}
+
+#curriculum .curriculum-side-stats div{
+  box-sizing:border-box;
+  min-height:68px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:5px;
+  padding:13px 14px;
+  border:1px solid var(--line);
+  border-radius:10px;
+  background:var(--bg);
+  transition:background .2s ease,border-color .2s ease,transform .2s ease;
+}
+
+#curriculum .curriculum-side-stats div:hover{
+  background:var(--red);
+  border-color:var(--red);
+  transform:translateY(-2px);
+}
+
+#curriculum .curriculum-side-stats div:hover b,
+#curriculum .curriculum-side-stats div:hover span{
+  color:#181008;
+}
+
+@media(max-width:760px){
+  #curriculum .curriculum-side-info{
+    padding:24px 22px 26px;
+  }
+}
+</style>
+
+
+<style id="curriculum-center-title-refinement">
+#curriculum .curriculum-center-title{
+  font-size:24px;
+  line-height:1;
+  letter-spacing:-.045em;
+}
+#curriculum .curriculum-center-title em{
+  color:var(--red);
+  font-style:normal;
+}
+</style>
+
+
+<style id="contact-designer-refinement">
+/* Clickable placement/contact details */
+#contact .contact-link{
+  color:inherit;
+  text-decoration:none;
+  border-bottom:1px solid transparent;
+  transition:color .2s ease,border-color .2s ease;
+}
+#contact .contact-link:hover{
+  color:var(--red);
+  border-color:var(--red);
+}
+
+/* Designer credit */
+footer{position:relative;}
+.designer-tag{
+  width:max-content;
+  margin:22px auto 0;
+  padding:8px 13px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:rgba(255,91,65,.045);
+  color:var(--red);
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.designer-tag span{color:var(--mut);font-weight:700;letter-spacing:.06em;}
+@media(max-width:560px){.designer-tag{margin-top:18px;font-size:8px;}}
+</style>
+
+<style id="custom-pointer-scrollbar">
+/* Custom mouse pointer */
+html, body, body * {
+  cursor: none !important;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--red);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 4px rgba(255,91,65,.10), 0 0 14px rgba(255,91,65,.30);
+  transition: width .12s ease, height .12s ease, background .12s ease, border-color .12s ease;
+}
+
+body.cursor-hover::after {
+  width: 22px;
+  height: 22px;
+  background: rgba(255,91,65,.12);
+  border-color: var(--red);
+}
+
+/* Custom themed scrollbar */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--red) #171717;
+}
+
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+html::-webkit-scrollbar-track {
+  background: #171717;
+  border-left: 1px solid rgba(255,255,255,.05);
+}
+
+html::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff654d, var(--red));
+  border-radius: 999px;
+  border: 2px solid #171717;
+  box-shadow: 0 0 10px rgba(255,91,65,.20);
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: #ff725c;
+}
+
+/* Keep normal pointer behaviour on touch devices */
+@media (hover: none), (pointer: coarse) {
+  html, body, body * {
+    cursor: auto !important;
+  }
+
+  body::after {
+    display: none;
+  }
+}
+</style>
+
+
+<style id="nav-rounded-rectangle">
+/* Navigation: use a rounded rectangle highlight instead of changing the font */
+.navlinks a,
+.navlinks a:hover,
+.navlinks a:focus,
+.navlinks a.active,
+.navlinks a[aria-current="page"]{
+  font-weight:inherit !important;
+  color:var(--mut) !important;
+  text-decoration:none !important;
+}
+
+.navlinks a{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:38px;
+  padding:0 13px;
+  border:1px solid transparent;
+  border-radius:9px;
+  transition:color .2s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.navlinks a:hover,
+.navlinks a:focus-visible,
+.navlinks a.active,
+.navlinks a[aria-current="page"]{
+  color:#f4f1ec !important;
+  background:rgba(255,91,65,.10);
+  border-color:rgba(255,91,65,.45);
+  box-shadow:0 0 0 3px rgba(255,91,65,.06);
+}
+
+.navlinks a:focus-visible{
+  outline:none;
+}
+</style>
+
+
+<style id="nav-smooth-neutral">
+.navlinks a{
+  transition:
+    color .28s ease,
+    background-color .28s ease,
+    border-color .28s ease,
+    box-shadow .28s ease,
+    transform .28s cubic-bezier(.22,.8,.25,1);
+}
+.navlinks a:hover,
+.navlinks a:focus-visible,
+.navlinks a.active,
+.navlinks a[aria-current="page"]{
+  color:#f4f1ec !important;
+  background:rgba(145,158,175,.10);
+  border-color:rgba(145,158,175,.34);
+  box-shadow:0 0 0 3px rgba(145,158,175,.045);
+  transform:translateY(-1px);
+}
+.navlinks a:active{
+  transform:translateY(0);
+}
+</style>
+
+
+<style id="student-contact-boxes">
+.student-links{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-top:12px;
+}
+
+.student-contact-box{
+  width:34px;
+  height:32px;
+  display:inline-flex !important;
+  align-items:center;
+  justify-content:center;
+  margin:0 !important;
+  padding:0 !important;
+  border:1px solid var(--line);
+  border-radius:8px;
+  background:var(--bg2);
+  color:var(--mut) !important;
+  text-decoration:none !important;
+  transition:
+    color .22s ease,
+    background .22s ease,
+    border-color .22s ease,
+    transform .22s ease;
+}
+
+.student-contact-box span{
+  color:inherit !important;
+  line-height:1;
+  font-size:14px;
+  font-weight:700;
+}
+
+.student-contact-box.linkedin-box span{
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:15px;
+  letter-spacing:-.04em;
+}
+
+.student-contact-box.email-box span{
+  font-size:15px;
+}
+
+.student-contact-box:hover{
+  color:#f4f1ec !important;
+  background:rgba(145,158,175,.12);
+  border-color:rgba(145,158,175,.42);
+  transform:translateY(-2px);
+}
+
+@media(max-width:500px){
+  .student-contact-box{
+    width:36px;
+    height:34px;
+  }
+}
+</style>
+
+
+<style id="designer-credit-refinement">
+/* Compact editorial designer credit */
+footer{position:relative;}
+footer .wrap{position:relative;}
+.designer-tag{
+  width:max-content;
+  margin:26px 0 0 auto !important;
+  padding:8px 13px !important;
+  border:1px solid rgba(255,91,65,.42) !important;
+  border-radius:8px !important;
+  background:rgba(255,91,65,.07) !important;
+  color:#ff725c !important;
+  font-size:9px !important;
+  font-weight:900 !important;
+  letter-spacing:.13em !important;
+  text-transform:uppercase;
+  box-shadow:none !important;
+}
+.designer-tag span{
+  color:#aaa6a0 !important;
+  font-weight:700 !important;
+  letter-spacing:.07em !important;
+}
+@media(max-width:560px){
+  .designer-tag{
+    margin:20px 0 0 auto !important;
+    font-size:8px !important;
+    padding:7px 10px !important;
+  }
+}
+</style>
+
+<style id="geotech-silhouette-style">
+/* Stable editorial geotechnical silhouette */
+.geo-silhouette{
+  position:absolute;
+  right:3.8vw;
+  top:96px;
+  width:205px;
+  height:520px;
+  color:var(--mut);
+  opacity:.13;
+  pointer-events:none;
+  z-index:0;
+  transform:none !important;
+  will-change:auto;
+}
+.geo-silhouette svg{
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+/* Pipelines grow downward as the visitor scrolls */
+.geo-pipelines{
+  position:absolute;
+  top:485px;
+  right:calc(3.8vw + 54px);
+  width:110px;
+  height:0;
+  pointer-events:none;
+  z-index:0;
+  opacity:.11;
+  overflow:visible;
+  transition:height .12s linear;
+}
+.geo-pipe{
+  position:absolute;
+  top:0;
+  width:2px;
+  height:100%;
+  background:linear-gradient(to bottom,rgba(255,91,65,.85),rgba(255,91,65,.08));
+  box-shadow:0 0 7px rgba(255,91,65,.10);
+}
+.geo-pipe.p1{left:20px;}
+.geo-pipe.p2{left:54px;}
+.geo-pipe.p3{left:88px;}
+.geo-pipe:before,
+.geo-pipe:after{
+  content:"";
+  position:absolute;
+  width:10px;
+  height:10px;
+  border:1px solid rgba(255,91,65,.55);
+  border-radius:50%;
+  left:50%;
+  transform:translateX(-50%);
+  background:#111;
+}
+.geo-pipe:before{top:-5px;}
+.geo-pipe:after{bottom:-5px;}
+
+.geo-pipe-branch{
+  position:absolute;
+  top:88px;
+  left:20px;
+  width:68px;
+  height:1px;
+  background:rgba(255,91,65,.55);
+}
+.geo-pipe-branch:after{
+  content:"";
+  position:absolute;
+  right:0;
+  top:-4px;
+  width:8px;
+  height:8px;
+  border:1px solid rgba(255,91,65,.55);
+  border-radius:50%;
+  background:#111;
+}
+
+section, header, footer, nav{
+  position:relative;
+  z-index:1;
+}
+
+@media(max-width:1050px){
+  .geo-silhouette{
+    right:14px;
+    width:145px;
+    height:400px;
+    top:90px;
+    opacity:.08;
+  }
+  .geo-pipelines{
+    right:78px;
+    top:400px;
+    transform:scale(.8);
+    transform-origin:top right;
+  }
+}
+@media(max-width:760px){
+  .geo-silhouette,
+  .geo-pipelines{display:none;}
+}
+</style>
+
+
+<style id="designer-credit-final">
+/* Final designer credit — compact, highlighted, right-aligned */
+footer{
+  position:relative !important;
+  padding-bottom:72px !important;
+}
+footer .designer-tag{
+  position:absolute !important;
+  right:max(24px, calc((100vw - 1100px) / 2)) !important;
+  bottom:24px !important;
+  width:auto !important;
+  margin:0 !important;
+  padding:0 !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:none !important;
+  box-shadow:none !important;
+  color:#8f8b86 !important;
+  font-size:9px !important;
+  font-weight:700 !important;
+  line-height:1.3 !important;
+  letter-spacing:.16em !important;
+  text-transform:uppercase !important;
+  text-align:right !important;
+  white-space:nowrap !important;
+}
+footer .designer-tag:before{
+  content:"";
+  display:inline-block;
+  width:24px;
+  height:1px;
+  margin:0 9px 3px 0;
+  background:rgba(255,91,65,.65);
+}
+footer .designer-tag span{
+  color:#77736f !important;
+  font-size:8px !important;
+  font-weight:600 !important;
+  letter-spacing:.12em !important;
+}
+footer .designer-tag{
+  color:#ff6b54 !important;
+}
+footer .designer-tag span + *{}
+@media(max-width:700px){
+  footer{padding-bottom:64px !important;}
+  footer .designer-tag{
+    right:20px !important;
+    bottom:20px !important;
+    font-size:8px !important;
+    letter-spacing:.12em !important;
+  }
+}
+@media(max-width:420px){
+  footer .designer-tag{
+    right:16px !important;
+    bottom:18px !important;
+    font-size:7.5px !important;
+  }
+  footer .designer-tag:before{width:16px;margin-right:6px;}
+}
+</style>
+
+
+<style id="fixed-nav-active-section">
+/* Stable navigation bar + scroll-aware selected section */
+html{scroll-padding-top:82px;}
+body{padding-top:62px;}
+nav{
+  position:fixed !important;
+  top:0 !important;
+  left:0 !important;
+  right:0 !important;
+  width:100% !important;
+  height:62px !important;
+  z-index:10000 !important;
+  background:rgba(17,17,17,.94) !important;
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+nav .wrap{height:100%;display:flex;align-items:center;}
+.navlinks{display:flex;align-items:center;gap:4px;}
+.navlinks a{
+  min-height:34px !important;
+  padding:0 12px !important;
+  border:1px solid transparent !important;
+  border-radius:999px !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  color:var(--mut) !important;
+  transform:none !important;
+  transition:background-color .35s ease,border-color .35s ease,color .35s ease,box-shadow .35s ease !important;
+}
+.navlinks a:hover,.navlinks a:focus-visible{
+  color:#f4f1ec !important;
+  background:rgba(145,158,175,.07) !important;
+  border-color:rgba(145,158,175,.20) !important;
+  box-shadow:none !important;
+}
+.navlinks a.active,.navlinks a[aria-current="page"]{
+  color:#f4f1ec !important;
+  background:rgba(145,158,175,.14) !important;
+  border-color:rgba(145,158,175,.38) !important;
+  box-shadow:0 0 0 2px rgba(145,158,175,.035) !important;
+}
+@media(max-width:760px){
+  body{padding-top:58px;}
+  nav{height:58px !important;}
+  nav .wrap{overflow-x:auto;scrollbar-width:none;}
+  nav .wrap::-webkit-scrollbar{display:none;}
+  .navlinks{flex:0 0 auto;}
+}
+</style>
+
+
+<style id="designer-credit-aligned">
+/* Align designer credit with the right-side footer statement */
+footer .footer-right{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  justify-content:flex-start;
+}
+footer .footer-right .foot-cta{
+  text-align:right;
+}
+footer .footer-right .designer-tag{
+  position:static !important;
+  width:auto !important;
+  margin:14px 0 0 auto !important;
+  padding:0 !important;
+  border:0 !important;
+  background:none !important;
+  box-shadow:none !important;
+  text-align:right !important;
+  white-space:nowrap !important;
+}
+footer .footer-right .designer-tag:before{
+  display:none !important;
+}
+@media(max-width:700px){
+  footer .footer-right{align-items:flex-start;}
+  footer .footer-right .foot-cta,
+  footer .footer-right .designer-tag{text-align:left !important;}
+  footer .footer-right .designer-tag{margin-left:0 !important;}
+}
+</style>
+
+</head>
+<body>
+
+<div class="geo-silhouette" aria-hidden="true">
+  <svg viewBox="0 0 240 620" role="presentation">
+    <defs>
+      <linearGradient id="geoFade" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="currentColor" stop-opacity=".95"/>
+        <stop offset=".72" stop-color="currentColor" stop-opacity=".45"/>
+        <stop offset="1" stop-color="currentColor" stop-opacity=".12"/>
+      </linearGradient>
+    </defs>
+
+    <!-- tower / drilling mast -->
+    <g fill="none" stroke="url(#geoFade)" stroke-width="2">
+      <path d="M92 30 L148 30 L178 330 L62 330 Z"/>
+      <path d="M92 30 L62 330 M148 30 L178 330"/>
+      <path d="M78 105 L162 105 M70 175 L170 175 M65 245 L175 245"/>
+      <path d="M76 105 L162 175 M162 105 L70 175 M70 175 L170 245 M170 175 L65 245"/>
+      <path d="M90 30 L148 330 M150 30 L92 330"/>
+    </g>
+
+    <!-- drilling head -->
+    <g fill="none" stroke="currentColor" stroke-width="3">
+      <rect x="79" y="72" width="82" height="22" rx="4"/>
+      <path d="M120 94 V365"/>
+      <circle cx="120" cy="94" r="8"/>
+      <path d="M105 365 H135"/>
+    </g>
+
+    <!-- ground line and soil layers -->
+    <g fill="none">
+      <path d="M18 355 H222" stroke="currentColor" stroke-width="2"/>
+      <path d="M18 390 H222 M18 440 H222 M18 505 H222"
+            stroke="currentColor" stroke-width="1" stroke-dasharray="5 7" opacity=".55"/>
+      <path d="M18 390 H222" stroke="currentColor" stroke-width="2" opacity=".45"/>
+    </g>
+
+    <!-- rock / soil profile -->
+    <path d="M18 355 C48 348 70 362 100 355 C130 348 160 362 190 355 C204 352 214 353 222 355 V620 H18 Z"
+          fill="currentColor" opacity=".035"/>
+
+    <!-- pile / socket -->
+    <g fill="none" stroke="currentColor">
+      <path d="M96 355 L104 602 H136 L144 355 Z" stroke-width="3"/>
+      <path d="M104 410 H136 M105 470 H137 M106 530 H138" stroke-width="1" opacity=".6"/>
+      <path d="M111 355 V602 M129 355 V602" stroke-width="1" stroke-dasharray="4 5" opacity=".6"/>
+      <path d="M84 602 H156" stroke-width="4"/>
+      <path d="M92 602 L82 615 M148 602 L158 615" stroke-width="2"/>
+    </g>
+
+    <!-- small callout markers -->
+    <g fill="currentColor">
+      <circle cx="184" cy="105" r="3"/>
+      <circle cx="188" cy="355" r="3"/>
+      <circle cx="182" cy="505" r="3"/>
+    </g>
+    <g fill="none" stroke="currentColor" stroke-width="1" opacity=".5">
+      <path d="M184 105 H218 M188 355 H218 M182 505 H218"/>
+    </g>
+  </svg>
+</div>
+
+<div class="geo-pipelines" aria-hidden="true">
+  <span class="geo-pipe p1"></span>
+  <span class="geo-pipe p2"></span>
+  <span class="geo-pipe p3"></span>
+  <span class="geo-pipe-branch"></span>
+</div>
+
+
+<nav>
+  <div class="wrap">
+    <div class="brand">CUSAT <span>GEOTECH</span></div>
+    <div class="navlinks">
+      <a href="#about">About</a>
+      <a href="#program">Programme</a>
+      <a href="#curriculum">Curriculum</a>
+      <a href="#capabilities">Technical Skills</a><a href="#projects">Projects</a><a href="#rankings">Recognition</a><a href="#recruiters">Industry</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+
+    <div class="cusat-logo-wrap">
+      <img src="images/cusat-logo.webp" alt="Cochin University of Science and Technology (CUSAT) logo">
+      <div>
+        <strong>COCHIN UNIVERSITY OF SCIENCE AND TECHNOLOGY</strong>
+        <span>School of Engineering</span>
+      </div>
+    </div>
+
+    <div class="tag"><b>●</b> M.TECH GEOTECHNICAL ENGINEERING — SCHOOL OF ENGINEERING, CUSAT</div>
+
+    <h1>Build engineers who<br>understand <em>the ground</em>.</h1>
+
+    <p>
+      M.Tech Geotechnical Engineering at Cochin University of Science and Technology
+      combines advanced geotechnical theory, practical investigation, numerical analysis,
+      field exposure and research-oriented problem solving for modern infrastructure.
+    </p>
+
+    <div class="cta">
+      <a class="btn red" href="#contact">Placement Information</a>
+      <a class="btn ghost" href="#program">Explore the Programme</a>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><b>2</b><span>Years, full-time</span></div>
+      <div class="stat"><b>72</b><span>Total programme credits</span></div>
+      <div class="stat"><b>4</b><span>Academic semesters</span></div>
+      <div class="stat"><b>2</b><span>Semesters of dissertation work</span></div>
+    </div>
+  </div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="why">
+  <div class="wrap">
+    <div class="head"><span class="num">01</span><h2>Why hire Geotechnical Engineers from CUSAT?</h2></div>
+
+    <div class="grid3">
+      <div class="card red">
+        <h3>Industry-aligned curriculum</h3>
+        <p>
+          Training covers soil behaviour, foundations, ground improvement, numerical
+          analysis, earthquake geotechnics and other problems encountered in infrastructure.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Field & research exposure</h3>
+        <p>
+          Students connect classroom concepts with geotechnical investigation, construction
+          practice, analytical studies, internships and independent dissertation work.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Problem-solving mindset</h3>
+        <p>
+          Graduates are trained to investigate complex ground conditions, interpret
+          engineering data and develop practical and technically defensible solutions.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Numerical & analytical skills</h3>
+        <p>
+          The programme includes finite element analysis and analytical approaches used
+          for solving civil and geotechnical engineering problems.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Adaptable professionals</h3>
+        <p>
+          The programme develops the ability to work across construction, consulting,
+          research and multidisciplinary infrastructure environments.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Research-ready graduates</h3>
+        <p>
+          Dissertation work develops literature review, identification of research gaps,
+          independent investigation, technical reporting and professional presentation.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="head"><span class="num">02</span><h2>About Geotechnical Engineering</h2></div>
+
+    <div class="cols2">
+      <div>
+        <p class="lede">
+          Geotechnical Engineering deals with the behaviour of soil and rock and their
+          interaction with foundations, earth structures and infrastructure. At CUSAT,
+          the M.Tech programme develops advanced understanding through academic study,
+          practical exposure and research.
+        </p>
+
+        <p class="lede">
+          The programme is offered under the Division of Civil Engineering, School of
+          Engineering, CUSAT. The curriculum connects advanced geotechnical concepts with
+          analytical methods, field practice and research-oriented project work.
+        </p>
+      </div>
+
+      <div>
+        <p class="listh">Key areas</p>
+        <div class="chips">
+          <div class="chip">Soil Mechanics</div>
+          <div class="chip">Foundation Engineering</div>
+          <div class="chip">Ground Improvement</div>
+          <div class="chip">Finite Element Analysis</div>
+          <div class="chip">Geotechnical Earthquake Engineering</div>
+          <div class="chip">Marine Geotechnical Engineering</div>
+          <div class="chip">Field Investigation</div>
+          <div class="chip">Research & Dissertation</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="students">
+  <div class="wrap">
+    <div class="head">
+      <span class="num">03</span>
+      <h2>Meet Our Geotechnical Engineers</h2>
+    </div>
+    <p class="lede">
+      Meet the students of M.Tech Geotechnical Engineering — with their academic interests,
+      research areas and professional profiles.
+    </p>
+
+    <div class="people student-grid">
+
+      <div class="pcard student-card">
+        <div class="avatar student-photo">
+          <img src="images/student-01.webp" alt="Student 01">
+        </div>
+        <b>ANANDHU DINESH</b>
+        <span>M.Tech Geotechnical Engineering | 2025–27</span>
+        <p class="student-interest">Research Interest: Foundation Engineering</p>
+        <div class="student-links">
+          <a class="student-contact-box email-box" href="mailto:student01@cusat.ac.in" aria-label="Email student" title="Email">
+            <span aria-hidden="true">✉</span>
+          </a>
+          <a class="student-contact-box linkedin-box" href="https://www.linkedin.com/in/student01" target="_blank" rel="noopener" aria-label="LinkedIn profile" title="LinkedIn">
+            <span aria-hidden="true">in</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="pcard student-card">
+        <div class="avatar student-photo">
+          <img src="images/student-02.webp" alt="Student 02">
+        </div>
+        <b>ANEETTA DAVIS</b>
+        <span>M.Tech Geotechnical Engineering | 2025–27</span>
+        <p class="student-interest">Research Interest: Soil Mechanics</p>
+        <div class="student-links">
+          <a class="student-contact-box email-box" href="mailto:student02@cusat.ac.in" aria-label="Email student" title="Email">
+            <span aria-hidden="true">✉</span>
+          </a>
+          <a class="student-contact-box linkedin-box" href="https://www.linkedin.com/in/aneetta-davis-174255303" target="_blank" rel="noopener" aria-label="LinkedIn profile" title="LinkedIn">
+            <span aria-hidden="true">in</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="pcard student-card">
+        <div class="avatar student-photo">
+          <img src="images/student-03.webp" alt="Student 03">
+        </div>
+        <b>ANISHA SUSAN MATHEW</b>
+        <span>M.Tech Geotechnical Engineering | 2025–27</span>
+        <p class="student-interest">Research Interest: Rock Mechanics</p>
+        <div class="student-links">
+          <a class="student-contact-box email-box" href="mailto:student03@cusat.ac.in" aria-label="Email student" title="Email">
+            <span aria-hidden="true">✉</span>
+          </a>
+          <a class="student-contact-box linkedin-box" href="https://www.linkedin.com/in/anisha-susan-mathew-8ab41043a" target="_blank" rel="noopener" aria-label="LinkedIn profile" title="LinkedIn">
+            <span aria-hidden="true">in</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="pcard student-card">
+        <div class="avatar student-photo">
+          <img src="images/student-04.webp" alt="Student 04">
+        </div>
+        <b>AVANI DINESH</b>
+        <span>M.Tech Geotechnical Engineering | 2025–27</span>
+        <p class="student-interest">Research Interest: Ground Improvement</p>
+        <div class="student-links">
+          <a class="student-contact-box email-box" href="mailto:student04@cusat.ac.in" aria-label="Email student" title="Email">
+            <span aria-hidden="true">✉</span>
+          </a>
+          <a class="student-contact-box linkedin-box" href="https://www.linkedin.com/in/avani-dinesh-clt" target="_blank" rel="noopener" aria-label="LinkedIn profile" title="LinkedIn">
+            <span aria-hidden="true">in</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="pcard student-card">
+        <div class="avatar student-photo">
+          <img src="images/student-05.webp" alt="Student 05">
+        </div>
+        <b>DEEPAK K N</b>
+        <span>M.Tech Geotechnical Engineering | 2025–27</span>
+        <p class="student-interest">Research Interest: Geotechnical Earthquake Engineering</p>
+        <div class="student-links">
+          <a class="student-contact-box email-box" href="mailto:student05@cusat.ac.in" aria-label="Email student" title="Email">
+            <span aria-hidden="true">✉</span>
+          </a>
+          <a class="student-contact-box linkedin-box" href="https://www.linkedin.com/in/student05" target="_blank" rel="noopener" aria-label="LinkedIn profile" title="LinkedIn">
+            <span aria-hidden="true">in</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="pcard student-card">
+        <div class="avatar student-photo">
+          <img src="images/student-06.webp" alt="Student 06">
+        </div>
+        <b>FATHIMATH RINCY</b>
+        <span>M.Tech Geotechnical Engineering | 2025–27</span>
+        <p class="student-interest">Research Interest: Numerical Modelling</p>
+        <div class="student-links">
+          <a class="student-contact-box email-box" href="mailto:student06@cusat.ac.in" aria-label="Email student" title="Email">
+            <span aria-hidden="true">✉</span>
+          </a>
+          <a class="student-contact-box linkedin-box" href="https://www.linkedin.com/in/fathimath-rincy-p-46116a247" target="_blank" rel="noopener" aria-label="LinkedIn profile" title="LinkedIn">
+            <span aria-hidden="true">in</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="pcard student-card">
+        <div class="avatar student-photo">
+          <img src="images/student-07.webp" alt="Student 07">
+        </div>
+        <b>MEDLIN M</b>
+        <span>M.Tech Geotechnical Engineering | 2025–27</span>
+        <p class="student-interest">Research Interest: Landslide Engineering</p>
+        <div class="student-links">
+          <a class="student-contact-box email-box" href="mailto:student07@cusat.ac.in" aria-label="Email student" title="Email">
+            <span aria-hidden="true">✉</span>
+          </a>
+          <a class="student-contact-box linkedin-box" href="https://www.linkedin.com/in/medlin-m" target="_blank" rel="noopener" aria-label="LinkedIn profile" title="LinkedIn">
+            <span aria-hidden="true">in</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="pcard student-card">
+        <div class="avatar student-photo">
+          <img src="images/student-08.webp" alt="Student 08">
+        </div>
+        <b>MEGHNA O V</b>
+        <span>M.Tech Geotechnical Engineering | 2025–27</span>
+        <p class="student-interest">Research Interest: GIS & Data-Driven Geotechnics</p>
+        <div class="student-links">
+          <a class="student-contact-box email-box" href="mailto:student08@cusat.ac.in" aria-label="Email student" title="Email">
+            <span aria-hidden="true">✉</span>
+          </a>
+          <a class="student-contact-box linkedin-box" href="https://www.linkedin.com/in/ovmeghana" target="_blank" rel="noopener" aria-label="LinkedIn profile" title="LinkedIn">
+            <span aria-hidden="true">in</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="pcard student-card">
+        <div class="avatar student-photo">
+          <img src="images/student-09.webp" alt="Student 09">
+        </div>
+        <b>RASHA FATHIMA</b>
+        <span>M.Tech Geotechnical Engineering | 2025–27</span>
+        <p class="student-interest">Research Interest: Foundation & Pile Engineering</p>
+        <div class="student-links">
+          <a class="student-contact-box email-box" href="mailto:student09@cusat.ac.in" aria-label="Email student" title="Email">
+            <span aria-hidden="true">✉</span>
+          </a>
+          <a class="student-contact-box linkedin-box" href="https://www.linkedin.com/in/rasha-fathima-c-s-34b0a2276" target="_blank" rel="noopener" aria-label="LinkedIn profile" title="LinkedIn">
+            <span aria-hidden="true">in</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+</div>
+</section>
+
+<section id="program" class="programme-agenda">
+  <div class="wrap">
+    <div class="head"><span class="num">04</span><h2>Programme at a glance</h2></div>
+    <div class="programme-agenda-shell">
+      <div class="programme-agenda-title">
+        <span class="eyebrow">M.Tech · Geotechnical Engineering</span>
+        <h3>The programme,<br><em>at a glance.</em></h3>
+        <p>A two-year, 72-credit programme combining advanced geotechnical theory, field-oriented learning, internship and dissertation work.</p>
+      </div>
+      <div class="programme-agenda-meta">
+        <span><b>02</b> Years</span><span><b>72</b> Credits</span><span><b>04</b> Semesters</span>
+      </div>
+      <aside class="programme-drawer" id="programmeDrawer">
+        <div class="programme-drawer-inner">
+          <div class="programme-drawer-head"><div><span>Academic pathway</span><h3>Programme Structure</h3></div><span>2025–27</span></div>
+          <div class="agenda-row"><div class="agenda-sem"><span class="roman">I</span><small>Semester</small></div><div class="agenda-content"><h4>Advanced foundation</h4><p>Core geotechnical theory, soil behaviour and engineering analysis establish the programme foundation.</p><span class="agenda-credits">22 CREDITS</span></div></div>
+          <div class="agenda-row"><div class="agenda-sem"><span class="roman">II</span><small>Semester</small></div><div class="agenda-content"><h4>Application & analysis</h4><p>Advanced applications, numerical approaches and laboratory / field-oriented engineering practice.</p><span class="agenda-credits">20 CREDITS</span></div></div>
+          <div class="agenda-row"><div class="agenda-sem"><span class="roman">III</span><small>Semester</small></div><div class="agenda-content"><h4>Industry + research</h4><p>Internship exposure followed by dissertation Phase I, literature review and research development.</p><span class="agenda-credits">15 CREDITS</span></div></div>
+          <div class="agenda-row"><div class="agenda-sem"><span class="roman">IV</span><small>Semester</small></div><div class="agenda-content"><h4>Dissertation & professional output</h4><p>Dissertation Phase II, technical documentation, analysis and professional presentation.</p><span class="agenda-credits">15 CREDITS</span></div></div>
+          <div class="programme-bottom-row"><div class="programme-mini"><b>INTERNSHIP</b><span>Industry / construction / geotechnical design / R&amp;D exposure.</span></div><div class="programme-mini"><b>DISSERTATION</b><span>Independent experimental or analytical research work.</span></div></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="curriculum">
+  <div class="wrap">
+    <div class="head"><span class="num">05</span><h2>Academic curriculum</h2></div>
+
+    <div class="curriculum-wheel" id="curriculumWheel">
+      <div class="curriculum-orbit orbit-outer"></div>
+      <div class="curriculum-orbit orbit-inner"></div>
+      <div class="curriculum-axis-dot dot-top"></div>
+      <div class="curriculum-axis-dot dot-bottom"></div>
+
+      <div class="curriculum-center">
+        <span class="curriculum-kicker">M.TECH · GEOTECHNICAL</span>
+        <strong class="curriculum-center-title">M.Tech<br><em>Geotechnical</em></strong>
+        <p id="curriculumDescription">Advanced geotechnical theory, engineering analysis and application across the four-semester programme.</p>
+      </div>
+
+      <button class="curriculum-node node-1 active" type="button" data-desc="Advanced understanding of soil behaviour, engineering properties and analytical methods for geotechnical problems.">
+        <span class="node-no">01</span><span class="node-label">Soil<br>Mechanics</span>
+      </button>
+      <button class="curriculum-node node-2" type="button" data-desc="Site investigation, subsurface characterization and instrumentation used to interpret ground conditions.">
+        <span class="node-no">02</span><span class="node-label">Site<br>Investigation</span>
+      </button>
+      <button class="curriculum-node node-3" type="button" data-desc="Shallow and deep foundations, bearing behaviour, settlement and foundation design concepts.">
+        <span class="node-no">03</span><span class="node-label">Foundation<br>Engineering</span>
+      </button>
+      <button class="curriculum-node node-4" type="button" data-desc="Ground modification, reinforced soil, geosynthetics and techniques for improving engineering performance.">
+        <span class="node-no">04</span><span class="node-label">Ground<br>Improvement</span>
+      </button>
+      <button class="curriculum-node node-5" type="button" data-desc="Soil dynamics, machine foundations and geotechnical earthquake engineering applications.">
+        <span class="node-no">05</span><span class="node-label">Earthquake<br>Geotechnics</span>
+      </button>
+      <button class="curriculum-node node-6" type="button" data-desc="Rock mechanics, marine geotechnics, numerical modelling, GIS and research-oriented applications.">
+        <span class="node-no">06</span><span class="node-label">Advanced<br>Applications</span>
+      </button>
+
+      
+    </div>
+    <div class="curriculum-side-info">
+      <span class="curriculum-side-kicker">CUSAT · SCHOOL OF ENGINEERING</span>
+      <h3>School of Engineering<br><em>at a glance.</em></h3>
+      <p>Engineering education, research and infrastructure-focused learning at CUSAT.</p>
+      <div class="curriculum-side-stats">
+        <div><b>3000+</b><span>Students</span></div>
+        <div><b>250+</b><span>Faculty</span></div>
+        <div><b>7</b><span>Departments</span></div>
+        <div><b>25+</b><span>Labs &amp; facilities</span></div>
+      </div>
+    </div>
+</div>
+</section>
+
+<section id="capabilities">
+  <div class="wrap">
+    <div class="head"><span class="num">06</span><h2>Technical capabilities</h2></div>
+    <p class="lede">A practical mix of geotechnical fundamentals, engineering analysis, field interpretation and digital tools relevant to consulting, construction and infrastructure projects.</p>
+    <div class="capability-grid">
+      <div class="capability-card"><div class="cap-no">01 / FOUNDATIONS</div><h3>Foundation Engineering</h3><p>Foundation behaviour, bearing capacity, settlement and deep foundation concepts.</p></div>
+      <div class="capability-card"><div class="cap-no">02 / GROUND</div><h3>Ground Improvement</h3><p>Soil modification, grouting, reinforced earth and geosynthetic applications.</p></div>
+      <div class="capability-card"><div class="cap-no">03 / NUMERICAL</div><h3>Numerical Analysis</h3><p>Analytical and finite-element approaches for civil and geotechnical problems.</p></div>
+      <div class="capability-card"><div class="cap-no">04 / INVESTIGATION</div><h3>Site Investigation</h3><p>Interpretation of subsurface information and engineering characterization.</p></div>
+      <div class="capability-card"><div class="cap-no">05 / EARTHQUAKE</div><h3>Earthquake Geotechnics</h3><p>Liquefaction, seismic ground response and stability-related concepts.</p></div>
+      <div class="capability-card"><div class="cap-no">06 / GIS</div><h3>Spatial Analysis</h3><p>GIS-based visualization and spatial interpretation of geotechnical information.</p></div>
+      <div class="capability-card"><div class="cap-no">07 / ROCK</div><h3>Rock Engineering</h3><p>Rock mechanics, rock–structure interaction and tunnelling-related studies.</p></div>
+      <div class="capability-card"><div class="cap-no">08 / DATA</div><h3>Engineering Data Analysis</h3><p>Data interpretation, statistical analysis, technical reporting and evidence-based engineering decisions.</p></div>
+    </div>
+<div class="tools-strip">
+      <div class="tool-pill"><b>QGIS</b> · Spatial Analysis</div><div class="tool-pill"><b>Python</b> · Data Analysis</div><div class="tool-pill"><b>FEM</b> · Numerical Modelling</div><div class="tool-pill"><b>AutoCAD</b> · Engineering Drawing</div><div class="tool-pill"><b>Excel</b> · Engineering Data</div><div class="tool-pill"><b>GIS</b> · Mapping & Visualization</div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="head"><span class="num">07</span><h2>Projects & research showcase</h2></div>
+    <p class="lede">Replace the cards below with verified student projects, dissertation topics, publications or industry-linked studies. The layout is designed to make technical work easy for recruiters to scan.</p>
+    <div class="project-grid">
+      <div class="project-card featured"><div class="project-tag">Featured research</div><h3>Spatial Variability & Probabilistic Geotechnical Assessment</h3><p>Use this feature card for the cohort's major dissertation or research theme. Add the actual study objective, study area and verified methods when finalized.</p><div class="project-tools"><span>QGIS</span><span>Statistics</span><span>Reliability</span><span>Geotechnical Data</span></div></div>
+      <div class="project-card"><div class="project-tag">Project 02</div><h3>Machine Learning in Geotechnical Engineering</h3><p>Placeholder for a verified ML-based study such as prediction, classification or data-driven assessment.</p><div class="project-tools"><span>Python</span><span>ML</span><span>Data Analysis</span></div></div>
+      <div class="project-card"><div class="project-tag">Project 03</div><h3>GIS-Based Geotechnical Assessment</h3><p>Placeholder for a verified spatial-analysis project involving terrain, ground conditions, hazards or infrastructure.</p><div class="project-tools"><span>QGIS</span><span>Spatial Data</span><span>Mapping</span></div></div>
+    </div>
+</div>
+</section>
+
+<section id="rankings" class="rankings-section">
+  <div class="wrap">
+    <div class="head">
+      <span class="num">08</span>
+      <h2>Rankings & Recognition</h2>
+    </div>
+
+    <div class="rankings-shell">
+      <div class="rankings-top">
+        <div class="rankings-kicker">
+          <div class="rankings-laurel">★</div>
+          <div>
+            <h3>Recognition at a glance</h3>
+            <span>University-level highlights</span>
+          </div>
+        </div>
+        <div class="rankings-note">
+          A compact recognition panel inspired by the supplied reference design.
+        </div>
+      </div>
+
+      <div class="rankings-grid">
+
+        <div class="rank-card featured">
+          <span class="rank-source">QS World Ranking</span>
+          <div class="rank-main">
+            <div class="rank-number">#1</div>
+            <div class="rank-copy">State / University<br>recognition</div>
+          </div>
+          <span class="rank-place">Kerala</span>
+          <div class="rank-medal"></div>
+        </div>
+
+        <div class="rank-card featured">
+          <span class="rank-source">NIRF Ranking</span>
+          <div class="rank-main">
+            <div class="rank-number">#1</div>
+            <div class="rank-copy">State Public<br>University Rank</div>
+          </div>
+          <span class="rank-place">India</span>
+          <div class="rank-medal"></div>
+        </div>
+
+        <div class="rank-card naac-card">
+          <span class="rank-source">NAAC Accreditation</span>
+          <div class="rank-main">
+            <div class="naac-value">A+</div>
+            <div class="rank-copy">Accredited<br>institution</div>
+          </div>
+          <span class="rank-place">National accreditation recognition</span>
+          <div class="rank-medal"></div>
+        </div>
+
+        <div class="rank-card">
+          <span class="rank-source">QS World Ranking</span>
+          <div class="rank-main">
+            <div class="rank-number">#32</div>
+            <div class="rank-copy">University<br>Ranking</div>
+          </div>
+          <span class="rank-place">India</span>
+          <div class="rank-medal"></div>
+        </div>
+
+        <div class="rank-card">
+          <span class="rank-source">NIRF Ranking</span>
+          <div class="rank-main">
+            <div class="rank-number">#32</div>
+            <div class="rank-copy">University<br>Rank</div>
+          </div>
+          <span class="rank-place">India</span>
+          <div class="rank-medal"></div>
+        </div>
+
+        <div class="rank-card">
+          <span class="rank-source">India Today</span>
+          <div class="rank-main">
+            <div class="rank-number">#1</div>
+            <div class="rank-copy">University<br>Ranking</div>
+          </div>
+          <span class="rank-place">Kerala</span>
+          <div class="rank-medal"></div>
+        </div>
+
+        <div class="rank-card">
+          <span class="rank-source">QS World Ranking</span>
+          <div class="rank-main">
+            <div class="rank-number">#262</div>
+            <div class="rank-copy">University<br>Ranking</div>
+          </div>
+          <span class="rank-place">Asia</span>
+          <div class="rank-medal"></div>
+        </div>
+
+        <div class="rank-card">
+          <span class="rank-source">NIRF Ranking</span>
+          <div class="rank-main">
+            <div class="rank-number">#50</div>
+            <div class="rank-copy">Overall<br>Rank</div>
+          </div>
+          <span class="rank-place">India</span>
+          <div class="rank-medal"></div>
+        </div>
+
+        <div class="rank-card">
+          <span class="rank-source">India Today</span>
+          <div class="rank-main">
+            <div class="rank-number">#1</div>
+            <div class="rank-copy">University<br>Ranking</div>
+          </div>
+          <span class="rank-place">India</span>
+          <div class="rank-medal"></div>
+        </div>
+
+      </div>
+
+      <div class="rankings-footer">
+        <span><b>RANKINGS & RECOGNITION</b> · CUSAT</span>
+        <span>Verify the ranking year/category before final publication.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="recruiters">
+  <div class="wrap">
+    <div class="head">
+      <span class="num">09</span>
+      <h2>Industry Connect</h2>
+    </div>
+
+    <p class="lede">
+      Organisations that have previously recruited from CUSAT. Replace the placeholders
+      below with the verified recruiter logos and names relevant to your placement brochure.
+    </p>
+
+    <div class="recruiter-grid">
+      <div class="recruiter-logo">
+        <img src="images/req/recruiter-01.webp" alt="Recruiter 01 logo">
+        <span>Recruiter 01</span>
+      </div>
+      <div class="recruiter-logo">
+        <img src="images/req/recruiter-02.webp" alt="Recruiter 02 logo">
+        <span>Recruiter 02</span>
+      </div>
+      <div class="recruiter-logo">
+        <img src="images/req/recruiter-03.webp" alt="Recruiter 03 logo">
+        <span>Recruiter 03</span>
+      </div>
+      <div class="recruiter-logo">
+        <img src="images/req/recruiter-04.webp" alt="Recruiter 04 logo">
+        <span>Recruiter 04</span>
+      </div>
+      <div class="recruiter-logo">
+        <img src="images/req/recruiter-05.webp" alt="Recruiter 05 logo">
+        <span>Recruiter 05</span>
+      </div>
+      <div class="recruiter-logo">
+        <img src="images/req/recruiter-06.webp" alt="Recruiter 06 logo">
+        <span>Recruiter 06</span>
+      </div>
+      <div class="recruiter-logo">
+        <img src="images/req/recruiter-07.webp" alt="Recruiter 07 logo">
+        <span>Recruiter 07</span>
+      </div>
+      <div class="recruiter-logo">
+        <img src="images/req/recruiter-08.webp" alt="Recruiter 08 logo">
+        <span>Recruiter 08</span>
+      </div>
+      <div class="recruiter-logo">
+        <img src="images/req/recruiter-09.webp" alt="Recruiter 09 logo">
+        <span>Recruiter 09</span>
+      </div>
+      <div class="recruiter-logo">
+        <img src="images/req/recruiter-10.webp" alt="Recruiter 10 logo">
+        <span>Recruiter 10</span>
+      </div>
+      <div class="recruiter-logo">
+        <img src="images/req/recruiter-11.webp" alt="Recruiter 11 logo">
+        <span>Recruiter 11</span>
+      </div>
+      <div class="recruiter-logo">
+        <img src="images/req/recruiter-12.webp" alt="Recruiter 12 logo">
+        <span>Recruiter 12</span>
+      </div>
+    </div>
+</div>
+</section>
+
+
+
+<section id="contact" style="border-bottom:none">
+  <div class="wrap">
+    <div class="head"><span class="num">11</span><h2>Placement & industry contact</h2></div>
+
+    <div class="cols2">
+      <div>
+        <h3>School of Engineering</h3>
+        <p class="lede">
+          Cochin University of Science and Technology<br>
+          Kochi – 682022, Kerala, India
+        </p>
+
+        <p class="listh">Chief Placement Officer</p>
+        <ul class="plain">
+          <li>Prof. Dr. Deepa Balakrishnan S</li>
+          <li>Placement Office: <a class="contact-link" href="tel:+914842577794">+91-484-2577794</a></li>
+          <li><a class="contact-link" href="mailto:placement@cusat.ac.in">placement@cusat.ac.in</a></li>
+          <li><a class="contact-link" href="mailto:cpo@cusat.ac.in">cpo@cusat.ac.in</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="listh">Student placement coordinator</p>
+        <ul class="plain">
+          <li>MEDLIN M</li>
+          <li><a class="contact-link" href="tel:+918078004193">+91 8078004193</a></li>
+          <li><a class="contact-link" href="mailto:mmmedlinmm@gmail.com">mmmedlinmm@gmail.com</a></li>
+        </ul>
+
+        <p class="listh" style="margin-top:20px">Programme</p>
+        <p class="lede">
+          M.Tech Geotechnical Engineering<br>
+          Division of Civil Engineering<br>
+          School of Engineering, CUSAT
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <h3>CUSAT GEOTECH</h3>
+      <p>M.Tech Geotechnical Engineering</p>
+      <p>School of Engineering | CUSAT</p>
+    </div>
+
+    <div class="footer-right">
+      <p class="foot-cta">
+        PEOPLE · IDEAS · SOLUTIONS · FOR A BRIGHTER TOMORROW
+      </p>
+      <div class="designer-tag">DESIGNED <span>by</span> MEDLIN M</div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+
+<script>
+document.querySelectorAll("#curriculumWheel .curriculum-node").forEach(node=>{
+  node.addEventListener("click",()=>{
+    document.querySelectorAll("#curriculumWheel .curriculum-node").forEach(n=>n.classList.remove("active"));
+    node.classList.add("active");
+    const desc=document.getElementById("curriculumDescription");
+    if(desc) desc.textContent=node.dataset.desc||"";
+  });
+});
+</script>
+
+
+<script>
+(function(){
+  const wheel=document.getElementById('curriculumWheel');
+  if(!wheel) return;
+  const nodes=[...wheel.querySelectorAll('.curriculum-node')];
+  const desc=document.getElementById('curriculumDescription');
+  if(!nodes.length || !desc) return;
+  let index=0;
+  let timer;
+
+  function activate(i, animate=true){
+    index=(i+nodes.length)%nodes.length;
+    nodes.forEach((node,n)=>{
+      node.classList.toggle('active',n===index);
+      node.classList.toggle('auto-active',n===index);
+    });
+    const text=nodes[index].dataset.desc || '';
+    if(animate){
+      desc.classList.add('topic-changing');
+      setTimeout(()=>{ desc.textContent=text; desc.classList.remove('topic-changing'); },220);
+    }else{
+      desc.textContent=text;
+    }
+  }
+
+  function start(){
+    clearInterval(timer);
+    timer=setInterval(()=>activate(index+1),3000);
+  }
+
+  nodes.forEach((node,i)=>{
+    node.addEventListener('click',()=>{ activate(i,false); start(); });
+  });
+
+  activate(0,false);
+  start();
+})();
+</script>
+
+
+<script id="custom-pointer-script">
+(function () {
+  const root = document.body;
+  let raf = null;
+  let x = -100, y = -100;
+
+  function moveCursor(e) {
+    x = e.clientX;
+    y = e.clientY;
+
+    if (!raf) {
+      raf = requestAnimationFrame(function () {
+        root.style.setProperty('--cursor-x', x + 'px');
+        root.style.setProperty('--cursor-y', y + 'px');
+
+        const cursor = getComputedStyle(document.body, '::after');
+        // Position the pseudo-element through a dynamically injected rule.
+        let style = document.getElementById('cursor-position-style');
+        if (!style) {
+          style = document.createElement('style');
+          style.id = 'cursor-position-style';
+          document.head.appendChild(style);
+        }
+        style.textContent =
+          'body::after{left:' + x + 'px !important;top:' + y + 'px !important;}';
+
+        raf = null;
+      });
+    }
+  }
+
+  document.addEventListener('mousemove', moveCursor, {passive:true});
+
+  document.addEventListener('mouseover', function (e) {
+    const target = e.target.closest('a, button, input, select, textarea, [role="button"], .card, .rank-card');
+    if (target) root.classList.add('cursor-hover');
+  });
+
+  document.addEventListener('mouseout', function (e) {
+    const target = e.target.closest('a, button, input, select, textarea, [role="button"], .card, .rank-card');
+    if (target && !target.contains(e.relatedTarget)) root.classList.remove('cursor-hover');
+  });
+})();
+</script>
+
+
+<script id="geotech-silhouette-scroll">
+(function(){
+  const art = document.querySelector('.geo-silhouette');
+  const pipes = document.querySelector('.geo-pipelines');
+  if(!art || !pipes) return;
+
+  // The rig stays completely still. Only the pipeline length responds to scroll.
+  const start = 0;
+  const maxHeight = Math.min(window.innerHeight * 0.62, 560);
+  let ticking = false;
+
+  function update(){
+    const y = Math.max(0, window.scrollY || 0);
+    const progress = Math.min(1, y / 1500);
+    const ease = progress * progress * (3 - 2 * progress);
+    pipes.style.height = (start + ease * maxHeight) + 'px';
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', function(){
+    if(!ticking){
+      requestAnimationFrame(update);
+      ticking = true;
+    }
+  }, {passive:true});
+
+  window.addEventListener('resize', update, {passive:true});
+  update();
+})();
+</script>
+
+
+<script id="scroll-section-nav">
+(function(){
+  const links=[...document.querySelectorAll('.navlinks a[href^="#"]')];
+  const sections=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  if(!links.length || !sections.length) return;
+
+  function setActive(id){
+    links.forEach(a=>{
+      const on=a.getAttribute('href')==='#'+id;
+      a.classList.toggle('active',on);
+      if(on) a.setAttribute('aria-current','page');
+      else a.removeAttribute('aria-current');
+    });
+  }
+
+  const observer=new IntersectionObserver(entries=>{
+    const visible=entries
+      .filter(e=>e.isIntersecting)
+      .sort((a,b)=>a.boundingClientRect.top-b.boundingClientRect.top);
+    if(visible[0]) setActive(visible[0].target.id);
+  },{root:null,rootMargin:'-82px 0px -52% 0px',threshold:[0,.05,.15,.3]});
+
+  sections.forEach(s=>observer.observe(s));
+
+  links.forEach(a=>a.addEventListener('click',()=>{
+    const id=a.getAttribute('href').slice(1);
+    setActive(id);
+  }));
+
+  let ticking=false;
+  function fallback(){
+    if(ticking)return;
+    ticking=true;
+    requestAnimationFrame(()=>{
+      const y=window.scrollY+100;
+      let current=sections[0];
+      sections.forEach(s=>{if(s.offsetTop<=y) current=s;});
+      if(current) setActive(current.id);
+      ticking=false;
+    });
+  }
+  window.addEventListener('scroll',fallback,{passive:true});
+  fallback();
+})();
+</script>
+
+</body>
+</html>
