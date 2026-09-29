@@ -1,6 +1,36 @@
 (() => {
   "use strict";
 
+  // ========================================
+  // WEBSITE SECTION VISIBILITY
+  // Change true/false here and redeploy.
+  // ========================================
+  const SECTION_VISIBILITY = {
+    recruiters: false
+  };
+
+  // Hide/show sections by their ID.
+  Object.entries(SECTION_VISIBILITY).forEach(([sectionId, isVisible]) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.style.display = isVisible ? "" : "none";
+    }
+  });
+
+  // Automatically renumber visible sections.
+  let visibleSectionNumber = 1;
+
+  document.querySelectorAll("section").forEach(section => {
+    if (getComputedStyle(section).display === "none") return;
+
+    const number = section.querySelector(".head .num");
+    if (number) {
+      number.textContent = String(visibleSectionNumber).padStart(2, "0");
+      visibleSectionNumber++;
+    }
+  });
+
+
   const navLinks = [...document.querySelectorAll("nav a[href^='#']")];
   const sections = navLinks
     .map(link => document.querySelector(link.getAttribute("href")))
@@ -64,4 +94,20 @@
       window.print();
     }
   });
+
+  // Expand/collapse individual student profiles.
+  document.querySelectorAll(".more-info-btn").forEach(button => {
+    button.addEventListener("click", () => {
+      const card = button.closest(".student-card");
+      const panelId = button.getAttribute("aria-controls");
+      const panel = panelId ? document.getElementById(panelId) : null;
+      if (!card || !panel) return;
+
+      const expanded = button.getAttribute("aria-expanded") === "true";
+      button.setAttribute("aria-expanded", String(!expanded));
+      card.classList.toggle("is-expanded", !expanded);
+      panel.hidden = expanded;
+    });
+  });
+
 })();
