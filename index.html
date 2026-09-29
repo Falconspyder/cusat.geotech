@@ -978,6 +978,8 @@ footer{
   padding-bottom:72px !important;
 }
 footer .designer-tag{
+  text-decoration:none !important;
+  cursor:pointer !important;
   position:absolute !important;
   right:max(24px, calc((100vw - 1100px) / 2)) !important;
   bottom:24px !important;
@@ -1014,7 +1016,7 @@ footer .designer-tag span{
 footer .designer-tag{
   color:#ff6b54 !important;
 }
-footer .designer-tag span + *{}
+
 @media(max-width:700px){
   footer{padding-bottom:64px !important;}
   footer .designer-tag{
@@ -1120,6 +1122,51 @@ footer .footer-right .designer-tag:before{
 }
 </style>
 
+
+<style id="student-contact-red-hover">
+/* Student Email + LinkedIn — red buttons with hover effect */
+section#students .student-contact-box.email-box,
+section#students .student-contact-box.linkedin-box{
+  background:var(--red) !important;
+  border-color:var(--red) !important;
+  color:#181008 !important;
+  box-shadow:none;
+  transform:translateY(0) scale(1);
+  transition:background .2s ease, border-color .2s ease, color .2s ease,
+              transform .2s ease, box-shadow .2s ease;
+}
+section#students .student-contact-box.email-box span,
+section#students .student-contact-box.linkedin-box span{
+  color:#181008 !important;
+}
+section#students .student-contact-box.email-box:hover,
+section#students .student-contact-box.linkedin-box:hover{
+  background:#ff725c !important;
+  border-color:#ff725c !important;
+  color:#181008 !important;
+  transform:translateY(-3px) scale(1.06);
+  box-shadow:0 7px 18px rgba(255,91,65,.25);
+}
+section#students .student-contact-box.email-box:hover span,
+section#students .student-contact-box.linkedin-box:hover span{
+  color:#181008 !important;
+}
+</style>
+
+<style id="designer-link-hover">
+footer .designer-tag{
+  text-decoration:none !important;
+  cursor:pointer !important;
+  transition:color .2s ease, transform .2s ease;
+}
+footer .designer-tag:hover{
+  color:var(--red) !important;
+  transform:translateY(-1px);
+}
+footer .designer-tag:hover span{
+  color:#aaa6a0 !important;
+}
+</style>
 </head>
 <body>
 
@@ -1385,7 +1432,7 @@ footer .footer-right .designer-tag:before{
         </div>
         <b>ANEETTA DAVIS</b>
         <span>M.Tech Geotechnical Engineering | 2025–27</span>
-        <p class="student-interest">Research Interest: Soil Mechanics</p>
+        <p class="student-interest">Research Interest: Ground improvement and subsurface investigation</p>
         <div class="student-links">
           <a class="student-contact-box email-box" href="mailto:student02@cusat.ac.in" aria-label="Email student" title="Email">
             <span aria-hidden="true">✉</span>
@@ -1402,7 +1449,7 @@ footer .footer-right .designer-tag:before{
         </div>
         <b>ANISHA SUSAN MATHEW</b>
         <span>M.Tech Geotechnical Engineering | 2025–27</span>
-        <p class="student-interest">Research Interest: Rock Mechanics</p>
+        <p class="student-interest">Research Interest: Experimental and Numerical investigation on anchor pullout in rockmass</p>
         <div class="student-links">
           <a class="student-contact-box email-box" href="mailto:student03@cusat.ac.in" aria-label="Email student" title="Email">
             <span aria-hidden="true">✉</span>
@@ -1419,7 +1466,7 @@ footer .footer-right .designer-tag:before{
         </div>
         <b>AVANI DINESH</b>
         <span>M.Tech Geotechnical Engineering | 2025–27</span>
-        <p class="student-interest">Research Interest: Ground Improvement</p>
+        <p class="student-interest">Research Interest: Geo Mechanical Behaviour of Red Mud steel slag mixture under varying moisture content</p>
         <div class="student-links">
           <a class="student-contact-box email-box" href="mailto:student04@cusat.ac.in" aria-label="Email student" title="Email">
             <span aria-hidden="true">✉</span>
@@ -1453,7 +1500,7 @@ footer .footer-right .designer-tag:before{
         </div>
         <b>FATHIMATH RINCY</b>
         <span>M.Tech Geotechnical Engineering | 2025–27</span>
-        <p class="student-interest">Research Interest: Numerical Modelling</p>
+        <p class="student-interest">Research Interest: Prediction of Resilient Modulus of Micaceous Sand under Different Crushing Conditions</p>
         <div class="student-links">
           <a class="student-contact-box email-box" href="mailto:student06@cusat.ac.in" aria-label="Email student" title="Email">
             <span aria-hidden="true">✉</span>
@@ -1503,8 +1550,8 @@ footer .footer-right .designer-tag:before{
           <img src="images/student-09.webp" alt="Student 09">
         </div>
         <b>RASHA FATHIMA</b>
-        <span>M.Tech Geotechnical Engineering | 2025–27</span>
-        <p class="student-interest">Research Interest: Foundation & Pile Engineering</p>
+        <span>Internship: </span>
+        <p class="student-interest">Research Interest: Numerical analysis of rockfall impact on flexible barrier</p>
         <div class="student-links">
           <a class="student-contact-box email-box" href="mailto:student09@cusat.ac.in" aria-label="Email student" title="Email">
             <span aria-hidden="true">✉</span>
@@ -1556,7 +1603,6 @@ footer .footer-right .designer-tag:before{
       <div class="curriculum-axis-dot dot-bottom"></div>
 
       <div class="curriculum-center">
-        <span class="curriculum-kicker">M.TECH · GEOTECHNICAL</span>
         <strong class="curriculum-center-title">M.Tech<br><em>Geotechnical</em></strong>
         <p id="curriculumDescription">Advanced geotechnical theory, engineering analysis and application across the four-semester programme.</p>
       </div>
@@ -1619,7 +1665,6 @@ footer .footer-right .designer-tag:before{
 <section id="projects">
   <div class="wrap">
     <div class="head"><span class="num">07</span><h2>Projects & research showcase</h2></div>
-    <p class="lede">Replace the cards below with verified student projects, dissertation topics, publications or industry-linked studies. The layout is designed to make technical work easy for recruiters to scan.</p>
     <div class="project-grid">
       <div class="project-card featured"><div class="project-tag">Featured research</div><h3>Spatial Variability & Probabilistic Geotechnical Assessment</h3><p>Use this feature card for the cohort's major dissertation or research theme. Add the actual study objective, study area and verified methods when finalized.</p><div class="project-tools"><span>QGIS</span><span>Statistics</span><span>Reliability</span><span>Geotechnical Data</span></div></div>
       <div class="project-card"><div class="project-tag">Project 02</div><h3>Machine Learning in Geotechnical Engineering</h3><p>Placeholder for a verified ML-based study such as prediction, classification or data-driven assessment.</p><div class="project-tools"><span>Python</span><span>ML</span><span>Data Analysis</span></div></div>
@@ -1643,9 +1688,6 @@ footer .footer-right .designer-tag:before{
             <h3>Recognition at a glance</h3>
             <span>University-level highlights</span>
           </div>
-        </div>
-        <div class="rankings-note">
-          A compact recognition panel inspired by the supplied reference design.
         </div>
       </div>
 
@@ -1745,7 +1787,6 @@ footer .footer-right .designer-tag:before{
 
       <div class="rankings-footer">
         <span><b>RANKINGS & RECOGNITION</b> · CUSAT</span>
-        <span>Verify the ranking year/category before final publication.</span>
       </div>
     </div>
   </div>
@@ -1759,18 +1800,17 @@ footer .footer-right .designer-tag:before{
     </div>
 
     <p class="lede">
-      Organisations that have previously recruited from CUSAT. Replace the placeholders
-      below with the verified recruiter logos and names relevant to your placement brochure.
+      Organisations that have previously recruited from CUSAT.
     </p>
 
     <div class="recruiter-grid">
       <div class="recruiter-logo">
         <img src="images/req/recruiter-01.webp" alt="Recruiter 01 logo">
-        <span>Recruiter 01</span>
+        <span>AECOM</span>
       </div>
       <div class="recruiter-logo">
         <img src="images/req/recruiter-02.webp" alt="Recruiter 02 logo">
-        <span>Recruiter 02</span>
+        <span>TATA PROJECT</span>
       </div>
       <div class="recruiter-logo">
         <img src="images/req/recruiter-03.webp" alt="Recruiter 03 logo">
@@ -1820,7 +1860,7 @@ footer .footer-right .designer-tag:before{
 
 <section id="contact" style="border-bottom:none">
   <div class="wrap">
-    <div class="head"><span class="num">11</span><h2>Placement & industry contact</h2></div>
+    <div class="head"><span class="num">10</span><h2>Placement & industry contact</h2></div>
 
     <div class="cols2">
       <div>
@@ -1870,7 +1910,7 @@ footer .footer-right .designer-tag:before{
       <p class="foot-cta">
         PEOPLE · IDEAS · SOLUTIONS · FOR A BRIGHTER TOMORROW
       </p>
-      <div class="designer-tag">DESIGNED <span>by</span> MEDLIN M</div>
+      <a class="designer-tag" href="https://falconspyder.github.io/medlin.portfolio.io/" target="_blank" rel="noopener" aria-label="Designed by Medlin M">DESIGNED <span>by</span> MEDLIN M</a>
     </div>
   </div>
 </footer>
