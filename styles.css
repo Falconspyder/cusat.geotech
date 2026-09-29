@@ -114,3 +114,111 @@ nav a.active{color:var(--ink);font-weight:700;}
   .btn{display:none;}
   section{break-inside:avoid;}
 }
+
+/* ===== FINAL STUDENT PROFILE LAYOUT ===== */
+section#students .people.student-grid{
+  display:grid !important;
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  gap:16px !important;
+  width:100% !important;
+  max-width:100% !important;
+  min-width:0 !important;
+  align-items:start !important;
+}
+
+section#students .people.student-grid .student-card{
+  box-sizing:border-box !important;
+  display:flex !important;
+  flex-direction:column !important;
+  width:100% !important;
+  min-width:0 !important;
+  max-width:100% !important;
+  padding:18px !important;
+  overflow:hidden !important;
+  text-align:left !important;
+}
+
+section#students .people.student-grid .student-photo{
+  box-sizing:border-box !important;
+  width:100% !important;
+  height:auto !important;
+  aspect-ratio:4 / 5 !important;
+  flex:0 0 auto !important;
+  margin:0 0 14px !important;
+  overflow:hidden !important;
+  border-radius:10px !important;
+  background:var(--bg2) !important;
+}
+
+section#students .people.student-grid .student-photo img{
+  display:block !important;
+  width:100% !important;
+  height:100% !important;
+  max-width:none !important;
+  max-height:none !important;
+  object-fit:cover !important;
+  object-position:center !important;
+}
+
+/* Keep 3 columns on normal desktop and smaller laptop CSS viewports.
+   This avoids a 1-column layout when browser zoom makes the CSS viewport narrower. */
+@media (max-width:700px){
+  section#students .people.student-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  }
+}
+@media (max-width:560px){
+  section#students .people.student-grid{
+    grid-template-columns:1fr !important;
+  }
+}
+
+
+/* ===== HERO CTA BUTTON HOVER — isolated from student profiles ===== */
+.cta .btn{
+  transition:
+    background-color .25s ease,
+    color .25s ease,
+    border-color .25s ease,
+    box-shadow .25s ease,
+    transform .25s ease;
+}
+
+.cta .btn.red:hover{
+  background:#ff6b54;
+  color:#181008;
+  border-color:#ff6b54;
+  transform:translateY(-3px);
+  box-shadow:0 8px 22px rgba(255,91,65,.28);
+}
+
+.cta .btn.ghost:hover{
+  background:var(--red);
+  color:#181008;
+  border-color:var(--red);
+  transform:translateY(-3px);
+  box-shadow:0 8px 22px rgba(255,91,65,.22);
+}
+
+.cta .btn:active{
+  transform:translateY(-1px);
+  box-shadow:0 4px 12px rgba(255,91,65,.18);
+}
+
+/* Student 04 */
+.student-photo img[src*="student-04"]{
+    object-position:center 30%;
+    transform:scale(1.10);
+}
+
+/* Student 05 */
+.student-photo img[src*="student-05"]{
+    object-position:center 25%;
+    transform:scale(1.05);
+}
+
+/* Student 07 */
+.student-photo img[src*="student-07"]{
+    object-position:center 30%;
+    transform:scale(1.10);
+}
